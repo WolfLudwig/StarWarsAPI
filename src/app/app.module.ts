@@ -1,15 +1,19 @@
+import { HttpClientModule } from '@angular/common/http'
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { MovieSelectComponentComponent } from './movie-select-component/movie-select-component.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    MovieSelectComponentComponent
   ],
   imports: [
     BrowserModule,
+    HttpClientModule,
     AppRoutingModule
   ],
   providers: [],
