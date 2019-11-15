@@ -1,0 +1,17 @@
+<h2>Choose your movie:</h2>
+
+<form [formGroup]="movieForm" (ngSubmit)="onSubmit()">
+
+<select name="StarWarsMovies" id="movie-select" formControlName="movieName" required>
+ 
+    <option *ngFor="let movie of movies" [ngValue]="movie"  >Star Wars Episode {{ movie.episode_id}}: {{ movie.title }}</option>
+
+</select>
+
+<button type="submit" [disabled]="!movieForm.valid">Ok</button>
+
+
+</form>
+<div *ngIf="selectedMovie" >
+<app-movie-details [movie]="selectedMovie"></app-movie-details>
+</div>

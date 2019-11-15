@@ -1,4 +1,4 @@
-export class People {
+export class Character {
   name: string;
   birth_year: string;
   eye_color: string;
