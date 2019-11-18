@@ -7,6 +7,8 @@
   <div>numéro de l'épisode: {{movie.episode_id}}</div>
   <div>texte roulant: {{movie.opening_crawl}}</div>
 
+  <div> <ul><li *ngFor="let character of movie.characters">{{character}}</li></ul> </div>
+
   {{movie.url}}
 
-  <app-movie-characters [url]="movie.url"></app-movie-characters>
+  <app-movie-characters [movie]="movie.characters"></app-movie-characters>

@@ -1,7 +1,7 @@
 import { Component, OnInit, Input } from "@angular/core";
 import { StarWarsService } from "../star-wars.service";
-import { Movie } from "../movie";
 import { Character } from "../character";
+import { Movie } from '../movie';
 
 @Component({
   selector: "app-movie-characters",
@@ -9,7 +9,7 @@ import { Character } from "../character";
   styleUrls: ["./movie-characters.component.css"]
 })
 export class MovieCharactersComponent implements OnInit {
-  @Input() url: string;
+  @Input() movie: string[];
   characters: Character[];
 
   constructor(private starwarsService: StarWarsService) {}
@@ -23,4 +23,5 @@ export class MovieCharactersComponent implements OnInit {
       .getStarWarsCharacters()
       .subscribe(characters => (this.characters = characters));
   }
+  
 }
