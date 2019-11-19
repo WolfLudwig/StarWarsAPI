@@ -1,14 +1,14 @@
 <p>movie-details works!</p>
+<div *ngIf="movie">
 
-
-    <h3>{{movie.title | uppercase}} </h3>
+  <h3>{{movie.title | uppercase}} </h3>
   <div>date de sortie: {{movie.release_date}}</div>
   <div>réalisateur: {{ movie.director }}</div>
   <div>numéro de l'épisode: {{movie.episode_id}}</div>
   <div>texte roulant: {{movie.opening_crawl}}</div>
 
-  <div> <ul><li *ngFor="let character of movie.characters">{{character}}</li></ul> </div>
-
   {{movie.url}}
 
-  <app-movie-characters [movie]="movie.characters"></app-movie-characters>
+</div>
+
+<app-movie-characters *ngFor="let selectedCharacter of movie.characters" [selectedCharacter]="selectedCharacter"></app-movie-characters>

@@ -38,5 +38,9 @@ export class StarWarsService {
     );
   }
 
+  // Appel de l'api pour personnage précis
+  getStarWarsCharacter(thisUrl : string): Observable<Character[]>{
+    return this.http.get<Character[]>(thisUrl);
+  }
 
 }
