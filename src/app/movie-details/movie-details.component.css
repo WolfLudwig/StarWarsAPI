@@ -1,0 +1,22 @@
+.block {
+  width: 95%;
+  margin: 0 auto;
+  padding: 0.5rem;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  border: 7px double yellow;
+  border-radius: 5px;
+}
+
+h3 {
+  text-align: center;
+}
+
+span {
+  font-weight: 700;
+}
+
+.opening {
+  margin-top: 0.5rem;
+  text-align: justify;
+}

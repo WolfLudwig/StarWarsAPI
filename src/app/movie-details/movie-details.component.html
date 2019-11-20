@@ -1,14 +1,13 @@
-<p>movie-details works!</p>
-<div *ngIf="movie">
-
-  <h3>{{movie.title | uppercase}} </h3>
-  <div>date de sortie: {{movie.release_date}}</div>
-  <div>réalisateur: {{ movie.director }}</div>
-  <div>numéro de l'épisode: {{movie.episode_id}}</div>
-  <div>texte roulant: {{movie.opening_crawl}}</div>
-
-  {{movie.url}}
-
+<div class="block" *ngIf="movie">
+  <h3>{{ movie.title | uppercase }}: EPISODE {{ movie.episode_id }}</h3>
+  <div>
+    <span>Date de sortie:</span> {{ movie.release_date | date: "dd/MM/yyyy" }}
+  </div>
+  <div><span>Réalisateur:</span> {{ movie.director }}</div>
+  <div class="opening">{{ movie.opening_crawl }}</div>
 </div>
 
-<app-movie-characters *ngFor="let selectedCharacter of movie.characters" [selectedCharacter]="selectedCharacter"></app-movie-characters>
+<app-movie-characters
+  *ngFor="let selectedCharacter of movie.characters"
+  [selectedCharacter]="selectedCharacter"
+></app-movie-characters>

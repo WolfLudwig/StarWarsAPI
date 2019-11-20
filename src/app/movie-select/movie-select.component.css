@@ -1,0 +1,32 @@
+h2 {
+  width: 30%;
+  margin: 0.5rem auto;
+  text-align: center;
+  font-size: 2rem;
+  font-family: Arial, Helvetica, sans-serif;
+  text-shadow: -1px 0 yellow, 0 1px yellow, 1px 0 yellow, 0 -1px yellow;
+}
+
+.form {
+  width: 50%;
+  margin: 1.5rem auto;
+  text-align: center;
+}
+
+.select {
+  background-color: black;
+  color: yellow;
+  border: yellow;
+  border-radius: 5px;
+  outline-color: yellow;
+}
+
+.button {
+  margin-left: 0.5rem;
+  padding: 0.4rem 0.5rem;
+  border: 2px solid yellow;
+  color: yellow;
+  background-color: black;
+  border-radius: 5px;
+  font-family: Arial, Helvetica, sans-serif;
+}

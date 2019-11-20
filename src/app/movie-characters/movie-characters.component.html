@@ -1,14 +1,12 @@
-<div class="ok">
-<div>
-   {{character?.name}}
-</div><div>
-   {{character?.birth_year}}
-</div><div>
-   {{character?.gender}}
-</div><div>
-   {{character?.height}}
-</div><div>
-   {{character?.hair_color}}
-</div><div>
-   {{character?.eye_color}}
+<div class="card">
+  <div class="info">
+    <div><span>Nom:</span> {{ character?.name }}</div>
+    <div><span>Année de naissance:</span> {{ character?.birth_year }}</div>
+    <div>
+      <span>Genre:</span> {{ character?.gender | slice: 0:1 | uppercase }}
+    </div>
+    <div><span>Taille:</span> {{ character?.height }} cm</div>
+    <div><span>Couleur des cheveux:</span> {{ character?.hair_color }}</div>
+    <div><span>Couleur des yeux:</span> {{ character?.eye_color }}</div>
+  </div>
 </div>

@@ -25,7 +25,9 @@ export class MovieCharactersComponent implements OnInit {
       .subscribe(characters => (this.characters = characters));
   }
 
-  getCharacter(): void{
-    this.starwarsService.getStarWarsCharacter(this.selectedCharacter).subscribe(character => (this.character = character));
+  getCharacter(): void {
+    this.starwarsService
+      .getStarWarsCharacter(this.selectedCharacter)
+      .subscribe(character => (this.character = character));
   }
 }
